@@ -44,6 +44,14 @@ public class MainActivity extends AppCompatActivity {
         CheckBox cbTrueOrFalseYes = (CheckBox)findViewById(R.id.cbTrueOrFalseYes);
         CheckBox cbTrueOrFalseNo = (CheckBox) findViewById(R.id.cbTrueOrFalseNo);
 
+        // False or True
+        CheckBox cbFalseOrTrueYes = (CheckBox)findViewById(R.id.cbFalseOrTrueYes);
+        CheckBox cbFalseOrTrueNo = (CheckBox)findViewById(R.id.cbFalseOrTrueNo);
+
+        // False Or False
+        CheckBox cbFalseOrFalseYes = (CheckBox)findViewById(R.id.cbFalseOrFalseYes);
+        CheckBox cbFalseOrFalseNo = (CheckBox)findViewById(R.id.cbFalseOrFalseNo);
+
 
         chxHealthyYes.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -175,6 +183,20 @@ public class MainActivity extends AppCompatActivity {
         cbTrueOrFalseYes.setChecked((trueOrFalse ? true : false));
         cbTrueOrFalseNo.setChecked((!trueOrFalse ? true : false));
 
+        // False Or True
+        boolean falseOrTrue = (false || true);
+
+        /*if (falseOrTrue){
+            cbFalseOrTrueYes.setChecked(true);
+        } else if (!falseOrTrue) {
+            cbFalseOrTrueNo.setChecked(true);
+        }*/
+
+        cbFalseOrTrueYes.setChecked((falseOrTrue ? true : false));
+        cbFalseOrTrueNo.setChecked((!falseOrTrue ? true : false));
+
+        // False Or False
+        boolean falseOrFalse = boogers
 
 
 
