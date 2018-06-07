@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         boolean amIHealthy = false;
-        int power = 97;
+        int power = 30;
 
         /*if (amIHealthy) {
 
@@ -64,12 +64,20 @@ public class MainActivity extends AppCompatActivity {
 
         amIHealthy = (power > 70 ? true : false);
 
-        if (amIHealthy) {
+        /*if (amIHealthy) {
             chxHealthyYes.setChecked(true);
         } else if (!amIHealthy) {
 
             chxHealthyNo.setChecked(true);
-        }
+        }*/
+
+        /*chxHealthyYes.setChecked((power > 80 ? true : false));
+        chxHealthyNo.setChecked((power < 80 ? true : false));*/
+
+        amIHealthy = (power > 90);
+
+        chxHealthyYes.setChecked((amIHealthy ? true : false)); // Make check box decide if checked
+        chxHealthyNo.setChecked((!amIHealthy ? true : false));
 
     }
 }
