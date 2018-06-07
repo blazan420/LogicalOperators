@@ -44,11 +44,30 @@ public class MainActivity extends AppCompatActivity {
         });
 
         boolean amIHealthy = false;
+        int power = 97;
 
-        if (amIHealthy) {
+        /*if (amIHealthy) {
 
             chxHealthyYes.setChecked(true);
         } else if (!amIHealthy) {
+            chxHealthyNo.setChecked(true);
+        }*/
+
+
+        /*amIHealthy = (power > 70);
+
+        if (amIHealthy) {
+            chxHealthyYes.setChecked(true);
+        } else if (!amIHealthy) {
+            chxHealthyNo.setChecked(true);
+        }*/
+
+        amIHealthy = (power > 70 ? true : false);
+
+        if (amIHealthy) {
+            chxHealthyYes.setChecked(true);
+        } else if (!amIHealthy) {
+
             chxHealthyNo.setChecked(true);
         }
 
