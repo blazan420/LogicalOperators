@@ -56,6 +56,12 @@ public class MainActivity extends AppCompatActivity {
         CheckBox cbTrueCaretTrueYes = (CheckBox)findViewById(R.id.cbTrueCaretTrueYes);
         CheckBox cbTrueCaretTrueNo = (CheckBox)findViewById(R.id.cbTrueCaretTrueNo);
 
+        // True ^ False
+        CheckBox cbTrueCaretFalseYes = (CheckBox)findViewById(R.id.cbTrueCaretFalseYes);
+        CheckBox cbTrueCaretFalseNo = (CheckBox)findViewById(R.id.cbTrueOrFalseNo);
+
+
+
 
         chxHealthyYes.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -214,10 +220,23 @@ public class MainActivity extends AppCompatActivity {
         // True ^ True
         boolean trueCaretTrue = (true ^ true);
 
-        if (trueCaretTrue){
+        /*if (trueCaretTrue){
             cbTrueCaretTrueYes.setChecked(true);
         }else if (!trueCaretTrue) {
             cbTrueCaretTrueNo.setChecked(true);
+        }*/
+
+        cbTrueCaretTrueYes.setChecked((trueCaretTrue ? true : false));
+        cbTrueCaretTrueNo.setChecked((!trueCaretTrue ? true : false));
+
+        // True ^ False
+        boolean trueCatretFalse = (true ^ false);
+
+        if (trueCatretFalse){
+            cbTrueCaretFalseYes.setChecked(true);
+        }else if (!trueCatretFalse){
+            cbTrueCaretFalseNo.setChecked(true);
+
         }
 
     }
