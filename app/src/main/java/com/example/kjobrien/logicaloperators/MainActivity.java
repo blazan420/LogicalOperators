@@ -60,6 +60,10 @@ public class MainActivity extends AppCompatActivity {
         CheckBox cbTrueCaretFalseYes = (CheckBox)findViewById(R.id.cbTrueCaretFalseYes);
         CheckBox cbTrueCaretFalseNo = (CheckBox)findViewById(R.id.cbTrueOrFalseNo);
 
+        // False ^ True
+        CheckBox cbFalseCaretTrueYes = (CheckBox) findViewById(R.id.cbFalseCaretTrueYes);
+        CheckBox cbFalseCaretTrueNo = (CheckBox) findViewById(R.id.cbFalseCaretTrueNo);
+
 
 
 
@@ -232,12 +236,28 @@ public class MainActivity extends AppCompatActivity {
         // True ^ False
         boolean trueCatretFalse = (true ^ false);
 
-        if (trueCatretFalse){
+        /*if (trueCatretFalse){
             cbTrueCaretFalseYes.setChecked(true);
         }else if (!trueCatretFalse){
             cbTrueCaretFalseNo.setChecked(true);
 
-        }
+        }*/
+
+        cbTrueCaretFalseYes.setChecked((trueCatretFalse ? true : false));
+        cbTrueCaretFalseNo.setChecked((!trueCatretFalse ? true : false));
+
+        // False ^ True
+        boolean falseCaretTrue = (false ^ true);
+
+        /*if (falseCaretTrue) {
+            cbFalseCaretTrueYes.setChecked(true);
+        } else if (!falseCaretTrue) {
+            cbFalseCaretTrueNo.setChecked(true);
+        }*/
+
+        cbFalseCaretTrueYes.setChecked((falseCaretTrue ? true : false));
+        cbFalseCaretTrueNo.setChecked((!falseCaretTrue ? true : false));
+
 
     }
 }
