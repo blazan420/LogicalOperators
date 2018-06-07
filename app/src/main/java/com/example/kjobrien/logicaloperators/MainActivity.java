@@ -19,52 +19,54 @@ public class MainActivity extends AppCompatActivity {
         final CheckBox chxHealthyNo = (CheckBox) findViewById(R.id.chxHealthyNo);
 
         // True And True
-        TextView txtTrueAndTrue = (TextView)findViewById(R.id.txtTrueAndTrue);
-        CheckBox chxTrueAndTrueYes = (CheckBox)findViewById(R.id.chxTrueAndTrueYes);
-        CheckBox chxTrueAndTrueNo = (CheckBox)findViewById(R.id.chxTrueAndTrueNo);
+        TextView txtTrueAndTrue = (TextView) findViewById(R.id.txtTrueAndTrue);
+        CheckBox chxTrueAndTrueYes = (CheckBox) findViewById(R.id.chxTrueAndTrueYes);
+        CheckBox chxTrueAndTrueNo = (CheckBox) findViewById(R.id.chxTrueAndTrueNo);
 
         // True And False
-        TextView txtTrueAndFalse = (TextView)findViewById(R.id.txtTrueAndFalse);
-        CheckBox chxTrueAndFalseYes = (CheckBox)findViewById(R.id.chxTrueAndFalseYes);
-        CheckBox chxTrueAndFalseNo = (CheckBox)findViewById(R.id.chxTrueAndFalseNo);
+        TextView txtTrueAndFalse = (TextView) findViewById(R.id.txtTrueAndFalse);
+        CheckBox chxTrueAndFalseYes = (CheckBox) findViewById(R.id.chxTrueAndFalseYes);
+        CheckBox chxTrueAndFalseNo = (CheckBox) findViewById(R.id.chxTrueAndFalseNo);
 
         // False And True
-        CheckBox chxFalseAndTrueYes = (CheckBox)findViewById(R.id.chxFalseAndTrueYes);
-        CheckBox chxFalseAndTrueNo = (CheckBox)findViewById(R.id.chxFalseAndTrueNo);
+        CheckBox chxFalseAndTrueYes = (CheckBox) findViewById(R.id.chxFalseAndTrueYes);
+        CheckBox chxFalseAndTrueNo = (CheckBox) findViewById(R.id.chxFalseAndTrueNo);
 
         // False And False
-        CheckBox cbFalseAndFalseYes = (CheckBox)findViewById(R.id.cbFalseAndFalseYes);
-        CheckBox cbFalseAndFalseNo = (CheckBox)findViewById(R.id.cbFalseAndFalseNo);
+        CheckBox cbFalseAndFalseYes = (CheckBox) findViewById(R.id.cbFalseAndFalseYes);
+        CheckBox cbFalseAndFalseNo = (CheckBox) findViewById(R.id.cbFalseAndFalseNo);
 
         // True Or True
-        CheckBox cbTrueOrTrueYes = (CheckBox)findViewById(R.id.cbTrueOrTrueYes);
-        CheckBox cbTrueOrTrueNo = (CheckBox)findViewById(R.id.cbTrueOrTrueNo);
+        CheckBox cbTrueOrTrueYes = (CheckBox) findViewById(R.id.cbTrueOrTrueYes);
+        CheckBox cbTrueOrTrueNo = (CheckBox) findViewById(R.id.cbTrueOrTrueNo);
 
         // True Or False
-        CheckBox cbTrueOrFalseYes = (CheckBox)findViewById(R.id.cbTrueOrFalseYes);
+        CheckBox cbTrueOrFalseYes = (CheckBox) findViewById(R.id.cbTrueOrFalseYes);
         CheckBox cbTrueOrFalseNo = (CheckBox) findViewById(R.id.cbTrueOrFalseNo);
 
         // False or True
-        CheckBox cbFalseOrTrueYes = (CheckBox)findViewById(R.id.cbFalseOrTrueYes);
-        CheckBox cbFalseOrTrueNo = (CheckBox)findViewById(R.id.cbFalseOrTrueNo);
+        CheckBox cbFalseOrTrueYes = (CheckBox) findViewById(R.id.cbFalseOrTrueYes);
+        CheckBox cbFalseOrTrueNo = (CheckBox) findViewById(R.id.cbFalseOrTrueNo);
 
         // False Or False
-        CheckBox cbFalseOrFalseYes = (CheckBox)findViewById(R.id.cbFalseOrFalseYes);
-        CheckBox cbFalseOrFalseNo = (CheckBox)findViewById(R.id.cbFalseOrFalseNo);
+        CheckBox cbFalseOrFalseYes = (CheckBox) findViewById(R.id.cbFalseOrFalseYes);
+        CheckBox cbFalseOrFalseNo = (CheckBox) findViewById(R.id.cbFalseOrFalseNo);
 
         // True ^ True
-        CheckBox cbTrueCaretTrueYes = (CheckBox)findViewById(R.id.cbTrueCaretTrueYes);
-        CheckBox cbTrueCaretTrueNo = (CheckBox)findViewById(R.id.cbTrueCaretTrueNo);
+        CheckBox cbTrueCaretTrueYes = (CheckBox) findViewById(R.id.cbTrueCaretTrueYes);
+        CheckBox cbTrueCaretTrueNo = (CheckBox) findViewById(R.id.cbTrueCaretTrueNo);
 
         // True ^ False
-        CheckBox cbTrueCaretFalseYes = (CheckBox)findViewById(R.id.cbTrueCaretFalseYes);
-        CheckBox cbTrueCaretFalseNo = (CheckBox)findViewById(R.id.cbTrueOrFalseNo);
+        CheckBox cbTrueCaretFalseYes = (CheckBox) findViewById(R.id.cbTrueCaretFalseYes);
+        CheckBox cbTrueCaretFalseNo = (CheckBox) findViewById(R.id.cbTrueOrFalseNo);
 
         // False ^ True
         CheckBox cbFalseCaretTrueYes = (CheckBox) findViewById(R.id.cbFalseCaretTrueYes);
         CheckBox cbFalseCaretTrueNo = (CheckBox) findViewById(R.id.cbFalseCaretTrueNo);
 
-
+        // False ^ False
+        CheckBox cbFalseCaretFalseYes = (CheckBox) findViewById(R.id.cbFalseCaretFalseYes);
+        CheckBox cbFalseCaretFalseNo = (CheckBox) findViewById(R.id.cbFalseCaretFalseNo);
 
 
         chxHealthyYes.setOnClickListener(new View.OnClickListener() {
@@ -148,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
             chxTrueAndFalseNo.setChecked(true);
         }*/
 
-        chxTrueAndFalseYes.setChecked((trueAndFalse ? true: false));
+        chxTrueAndFalseYes.setChecked((trueAndFalse ? true : false));
         chxTrueAndFalseNo.setChecked((!trueAndFalse ? true : false));
 
         // False And True
@@ -218,8 +220,8 @@ public class MainActivity extends AppCompatActivity {
             cbFalseOrFalseNo.setChecked(true);
         }*/
 
-        cbFalseOrFalseYes.setChecked(falseOrFalse ? true: false);
-        cbFalseOrFalseNo.setChecked(!falseOrFalse ? true: false);
+        cbFalseOrFalseYes.setChecked(falseOrFalse ? true : false);
+        cbFalseOrFalseNo.setChecked(!falseOrFalse ? true : false);
 
         // True ^ True
         boolean trueCaretTrue = (true ^ true);
@@ -258,6 +260,17 @@ public class MainActivity extends AppCompatActivity {
         cbFalseCaretTrueYes.setChecked((falseCaretTrue ? true : false));
         cbFalseCaretTrueNo.setChecked((!falseCaretTrue ? true : false));
 
+        // False ^ False
+        boolean falseCaretFalse = (false ^ false);
+
+        /*if (falseCaretFalse) {
+            cbFalseCaretFalseYes.setChecked(true);
+        } else if (!falseCaretFalse) {
+            cbFalseCaretFalseNo.setChecked(true);
+        }*/
+
+        cbFalseCaretFalseYes.setChecked(falseCaretFalse ? true : false);
+        cbFalseCaretFalseNo.setChecked(!falseCaretFalse ? true : false);
 
     }
 }
