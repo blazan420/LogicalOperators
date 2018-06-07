@@ -19,14 +19,18 @@ public class MainActivity extends AppCompatActivity {
         final CheckBox chxHealthyNo = (CheckBox) findViewById(R.id.chxHealthyNo);
 
         // True And True
-        TextView txtTrueAndTrue = (TextView) findViewById(R.id.txtTrueAndTrue);
-        CheckBox chxTrueAndTrueYes = (CheckBox) findViewById(R.id.chxTrueAndTrueYes);
-        CheckBox chxTrueAndTrueNo = (CheckBox) findViewById(R.id.chxTrueAndTrueNo);
+        TextView txtTrueAndTrue = (TextView)findViewById(R.id.txtTrueAndTrue);
+        CheckBox chxTrueAndTrueYes = (CheckBox)findViewById(R.id.chxTrueAndTrueYes);
+        CheckBox chxTrueAndTrueNo = (CheckBox)findViewById(R.id.chxTrueAndTrueNo);
 
         // True And False
-        TextView txtTrueAndFalse = (TextView) findViewById(R.id.txtTrueAndFalse);
-        CheckBox chxTrueAndFalseYes = (CheckBox) findViewById(R.id.chxTrueAndFalseYes);
-        CheckBox chxTrueAndFalseNo = (CheckBox) findViewById(R.id.chxTrueAndFalseNo);
+        TextView txtTrueAndFalse = (TextView)findViewById(R.id.txtTrueAndFalse);
+        CheckBox chxTrueAndFalseYes = (CheckBox)findViewById(R.id.chxTrueAndFalseYes);
+        CheckBox chxTrueAndFalseNo = (CheckBox)findViewById(R.id.chxTrueAndFalseNo);
+
+        // False And True
+        CheckBox chxFalseAndTrueYes = (CheckBox)findViewById(R.id.chxFalseAndTrueYes);
+        CheckBox chxFalseAndTrueNo = (CheckBox)findViewById(R.id.chxFalseAndTrueNo);
 
 
         chxHealthyYes.setOnClickListener(new View.OnClickListener() {
@@ -104,12 +108,23 @@ public class MainActivity extends AppCompatActivity {
 
         // True And False
         boolean trueAndFalse = (true && false);
-        if (trueAndFalse) {
+        /*if (trueAndFalse) {
             chxTrueAndFalseYes.setChecked(true);
         } else if (!trueAndFalse) {
-            chxTrueAndTrueNo.setChecked(true);
-        }
+            chxTrueAndFalseNo.setChecked(true);
+        }*/
 
+        chxTrueAndFalseYes.setChecked((trueAndFalse ? true: false));
+        chxTrueAndFalseNo.setChecked((!trueAndFalse ? true : false));
+
+        // False And True
+
+        boolean falseAndTrue = (false && true);
+        if(falseAndTrue){
+            chxFalseAndTrueYes.setChecked(true);
+        }else if (!falseAndTrue){
+            chxFalseAndTrueNo.setChecked(true);
+        }
 
     }
 }
