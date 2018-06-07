@@ -138,5 +138,29 @@
                 android:text="No" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="True Or True" />
+
+            <CheckBox
+                android:id="@+id/cbTrueOrTrueYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes" />
+
+            <CheckBox
+                android:id="@+id/cbTrueOrTrueNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No" />
+        </LinearLayout>
+
     </LinearLayout>
 </RelativeLayout>
