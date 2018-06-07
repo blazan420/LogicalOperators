@@ -19,9 +19,14 @@ public class MainActivity extends AppCompatActivity {
         final CheckBox chxHealthyNo = (CheckBox) findViewById(R.id.chxHealthyNo);
 
         // True And True
-        TextView txtTrueAndTrue = (TextView)findViewById(R.id.txtTrueAndTrue);
-        CheckBox chxTrueAndTrueYes = (CheckBox)findViewById(R.id.chxTrueAndTrueYes);
-        CheckBox chxTrueAndTrueNo = (CheckBox)findViewById(R.id.chxTrueAndTrueNo);
+        TextView txtTrueAndTrue = (TextView) findViewById(R.id.txtTrueAndTrue);
+        CheckBox chxTrueAndTrueYes = (CheckBox) findViewById(R.id.chxTrueAndTrueYes);
+        CheckBox chxTrueAndTrueNo = (CheckBox) findViewById(R.id.chxTrueAndTrueNo);
+
+        // True And False
+        TextView txtTrueAndFalse = (TextView) findViewById(R.id.txtTrueAndFalse);
+        CheckBox chxTrueAndFalseYes = (CheckBox) findViewById(R.id.chxTrueAndFalseYes);
+        CheckBox chxTrueAndFalseNo = (CheckBox) findViewById(R.id.chxTrueAndFalseNo);
 
 
         chxHealthyYes.setOnClickListener(new View.OnClickListener() {
@@ -88,11 +93,23 @@ public class MainActivity extends AppCompatActivity {
 
         boolean trueAndTrue = (true && true);
 
-        if (trueAndTrue) {
+        /*if (trueAndTrue) {
             chxTrueAndTrueYes.setChecked(true);
         } else if (!trueAndTrue) {
             chxHealthyNo.setChecked(true);
+        }*/
+
+        chxTrueAndTrueYes.setChecked((trueAndTrue ? true : false));
+        chxTrueAndTrueNo.setChecked((!trueAndTrue ? true : false));
+
+        // True And False
+        boolean trueAndFalse = (true && false);
+        if (trueAndFalse) {
+            chxTrueAndFalseYes.setChecked(true);
+        } else if (!trueAndFalse) {
+            chxTrueAndTrueNo.setChecked(true);
         }
+
 
     }
 }
